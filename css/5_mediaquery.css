@@ -1,0 +1,41 @@
+/* Media query */
+
+@media (max-width: 1450px) {
+  .contenttable {
+    display: none;
+  }
+}
+
+@media (max-width: 940px) {
+  body {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+}
+
+@media (max-width: 1300px) {
+  body {
+    margin-bottom: ;
+  }
+}
+
+@media (max-width: 760px) {
+  .hero {
+    display: none;
+  }
+  header {
+    margin-top: 5vh;
+  }
+}
+
+@media (max-width: 320px) {
+  h1 {
+    font-size: 24px;
+  }
+  
+  p {
+    font-family: 'Aileron Light';
+    font-size: 18px;
+    line-height: 1.5;
+  }
+}

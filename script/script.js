@@ -31,6 +31,12 @@ $(document).on('scroll', function() {
 
   $('.bar').css('width', percentage + '%')
   $('.percentage h3').html(Math.floor(percentage) + '% done')
+
+  if (percentage > 25) {
+    $('footer .percentage').addClass('footerAppear')
+  } else {
+    $('footer .percentage').removeClass('footerAppear')
+  }
 })
 
 // Contact toggle
@@ -74,23 +80,23 @@ $(document).on('scroll', function() {
   if (pixelsFromTop > 914) {
     $('body').css('background-color', '#c5d4ea')
     $('h1').css('color', 'white')
-    $('h3').css('color', 'white')
+//     $('h3').css('color', 'white')
     $('p').css('color', 'white')
     $('a').css('color', 'white')
-    $('.header').css('border-bottom', '1px white solid')
+    $('header').css('border-bottom', '1px white solid')
     $('.bar').css('background-color', 'white')
-    $('.contenttable').css('pointer-events', 'auto')
-    $('.contenttable').css('opacity', 1)
+    //     $('.contenttable').css('pointer-events', 'auto')
+    //     $('.contenttable').css('opacity', 1)
   } else {
     $('body').css('background-color', 'white')
     $('h1').css('color', '#C65162')
-    $('h3').css('color', '#C65162')
+//     $('h3').css('color', '#C65162')
     $('p').css('color', '#C65162')
     $('a').css('color', '#C65162')
-    $('.header').css('border-bottom', '1px #C65162 solid')
+    $('header').css('border-bottom', '1px #C65162 solid')
     $('.bar').css('background-color', '#C65162')
-    $('.contenttable').css('pointer-events', 'none')
-    $('.contenttable').css('opacity', 0)
+    //     $('.contenttable').css('pointer-events', 'none')
+    //     $('.contenttable').css('opacity', 0)
   }
 })
 

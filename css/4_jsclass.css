@@ -1,0 +1,21 @@
+/* JS Classes */
+
+.appear {
+  transform: translateY(0px);
+  opacity: 1;
+}
+
+.slideDown {
+  transform: translateY(30vh);
+  opacity: 1 !important;
+}
+
+.slideUp {
+  transform: translateY(-50vh);
+  opacity: 1 !important;
+}
+
+footer .footerAppear {
+  transform: translateY(0px);
+  opacity: 1;
+}

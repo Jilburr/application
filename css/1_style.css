@@ -1,29 +1,26 @@
-/* 
+/*
 1. Font
 2. Keyframes
 3. Loading screen
 4. Body
 5. Images
-6. JS Classes
-7. Media query
 */
-
 
 /* Font */
 
 @font-face {
   font-family: 'Aileron';
-  src: url(aileron-regular.otf);
+  src: url(/font/aileron-regular.otf);
 }
 
 @font-face {
   font-family: 'Aileron Bold';
-  src: url(aileron-bold.otf);
+  src: url(/font/aileron-bold.otf);
 }
 
 @font-face {
   font-family: 'Aileron Light';
-  src: url(aileron-light.otf);
+  src: url(/font/aileron-light.otf);
 }
 
 /* Keyframes */
@@ -58,6 +55,12 @@
   align-items: center;
   flex-direction: column;
   transition: all 0.2s;
+}
+
+.loading .readingtime {
+  margin-right: 10px;
+  margin-left: 10px;
+  text-align: center;
 }
 
 .loadingbar {
@@ -114,8 +117,10 @@ body {
 
   background-color: white;
   color: #c65162;
-  margin: 40px auto 40px auto;
-  width: 900px;
+  margin: 40px auto 50px auto;
+  max-width: 900px;
+
+  overflow-x: hidden;
 }
 
 h1 {
@@ -164,12 +169,13 @@ p .anchor:hover {
   display: block;
 }
 
-.header {
+header {
   text-align: center;
   margin-top: 100vh;
   margin-bottom: 20px;
   padding-bottom: 20px;
   border-bottom: 1px #c65162 solid;
+  transition: all 0.3s;
 }
 
 nav {
@@ -187,7 +193,7 @@ nav a {
   margin-right: 20px;
 }
 
-.contenttable {
+/* .contenttable {
   position: fixed;
   top: 8%;
   left: 4%;
@@ -200,16 +206,24 @@ nav a {
   color: white !important;
   font-size: 21px;
   font-weight: 300;
-}
+} */
 
 footer {
   position: fixed;
   bottom: 0;
-  left: 4%;
+  left: 0;
   width: 100%;
-  display: flex;
-  justify-content: space-between;
-  padding: 0px 20px 10px 20px;
+}
+
+footer .percentage {
+  width: 100%;
+  text-align: center;
+  color: rgb(198, 81, 98);
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px -2px 30px;
+  transform: translateY(40px);
+  opacity: 0;
+  transition: all 0.3s ease-out;
 }
 
 .bar {
@@ -253,29 +267,4 @@ footer {
   position: absolute;
   opacity: 0;
   transition: all 0.3s;
-}
-
-/* JS Classes */
-
-.appear {
-  transform: translateY(0px);
-  opacity: 1;
-}
-
-.slideDown {
-  transform: translateY(30vh);
-  opacity: 1 !important;
-}
-
-.slideUp {
-  transform: translateY(-50vh);
-  opacity: 1 !important;
-}
-
-/* Media query */
-
-@media (max-width: 1450px) {
-  .contenttable {
-    display: none;
-  }
 }
